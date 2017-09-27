@@ -1,0 +1,14 @@
+
+execute pathogen#infect()
+	syntax on
+filetype plugin indent on
+
+colorscheme evening
+
+
+"set number of the line
+set number
+
+"set font-size"
+set guifont=Courier_new:h18:b:cDEFAULT
+

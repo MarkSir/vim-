@@ -1,0 +1,29 @@
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+
+" paste
+map <F12> :set paste<CR>
+map <F11> :set nopaste<CR>
+
+" standard
+let g:syntastic_javascript_checkers = ['standard']
+autocmd bufwritepost *.js silent !standard --fix %
+set autoread
+
+" vim-go auto imports
+let g:go_fmt_command = "goimports"
+
+
+call plug#begin()
+
+Plug 'sbdchd/neoformat'
+call plug#end()
+
+
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
