@@ -8,22 +8,23 @@ map <F12> :set paste<CR>
 map <F11> :set nopaste<CR>
 
 " standard
-let g:syntastic_javascript_checkers = ['standard']
-autocmd bufwritepost *.js silent !standard --fix %
-set autoread
+"let g:syntastic_javascript_checkers = ['standard']
+"autocmd bufwritepost *.js silent !standard --fix %
+"set autoread
 
 " vim-go auto imports
 let g:go_fmt_command = "goimports"
 
 
-call plug#begin()
+"call plug#begin()
 
-Plug 'sbdchd/neoformat'
-call plug#end()
+" Plug 'sbdchd/neoformat'
+"Plug 'fatih/vim-go'
+"call plug#end()
 
 
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
+"augroup fmt
+"  autocmd!
+"  autocmd BufWritePre * undojoin | Neoformat
+"augroup END
