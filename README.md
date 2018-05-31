@@ -3,6 +3,7 @@
 该项目是vim编辑器的配置文件，依赖nerdtree。
 
 请先下载 NERDTree
+
 https://github.com/scrooloose/nerdtree
 
 之后将该项目clone到本地，并将文件复制到`~`目录下
